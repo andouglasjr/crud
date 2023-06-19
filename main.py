@@ -1,13 +1,15 @@
 import streamlit as st
 
 import page.insert as insert
+import page.select as select
 
 #criando a barra lateral do menu
 st.sidebar.title('Menu')
-page = st.sidebar.selectbox('Cliente',['Inserir', 'Consultar', 'Alterar','Deletar'])
+bt_menu_insert = st.sidebar.button('Inserir', 'insert_menu')
+bt_menu_select = st.sidebar.button('Consultar', 'select_menu')
 
-if page=='Inserir':
+if bt_menu_insert:
     insert.inserir()
 
-
-st.sidebar.markdown('PABD')
+if bt_menu_select:
+    select.consultar()
