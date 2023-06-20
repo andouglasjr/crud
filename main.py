@@ -5,11 +5,10 @@ import page.select as select
 
 #criando a barra lateral do menu
 st.sidebar.title('Menu')
-bt_menu_insert = st.sidebar.button('Inserir', 'insert_menu')
-bt_menu_select = st.sidebar.button('Consultar', 'select_menu')
+selectbox = st.sidebar.selectbox('Ação', ['Inserir', 'Consultar'])
 
-if bt_menu_insert:
+if selectbox == 'Inserir':
     insert.inserir()
 
-if bt_menu_select:
+if selectbox == 'Consultar':
     select.consultar()
