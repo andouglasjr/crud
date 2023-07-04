@@ -22,6 +22,5 @@ def consultar():
         on_click_excluir = button_excluir.button('x', 'btnExcluir' + str(item[0]))
         
         if on_click_excluir:
-            continue
-            #cliente.excluir(item[0])   
+            cliente.excluir(item[0])
             
